@@ -3,20 +3,121 @@
 
 <head>
     <title>My Web Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #c10e0e93;
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+
+        p {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 20px auto;
+            font-size: 16px;
+            background-color: #263179;
+            color: rgb(109, 13, 13);
+            border: none;
+            cursor: ew-resize;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #19da23;
+        }
+
+        form {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
 
     <h1>
         <marquee>Hello, world!</marquee>
     </h1>
 
-    <!-- This is the header -->
     <p>This is my first web page. More to come and amazing new ideas coming along!
         <br> This is the Institution where I am learning my coding in HTML, CSS, Java, and other programming languages.
     </p>
 
-    <div class="image-container">
+
+    <div class="logo">
         <img src="https://dented-code-meta.s3.ap-southeast-2.amazonaws.com/logo-lg.png" width="500"
             alt="Dented Code Logo">
     </div>
@@ -40,24 +141,27 @@
 
     <table border="10px">
         <thead>
-            <th>s.n</th>
-            <th> first name</th>
-            <th> second name</th>
-            <th>age</th>
+            <tr>
+                <th>s.n</th>
+                <th>first name</th>
+                <th>second name</th>
+                <th>age</th>
+            </tr>
         </thead>
-
-
+        <tbody>
+            <!-- Add table data here as needed -->
+        </tbody>
     </table>
 
     <hr style="border: 1px solid black; margin: 20px 0;">
 
-    <p> <strong>HOW TO CREATE FORM</strong></p>
+    <p><strong>HOW TO CREATE FORM</strong></p>
 
     <p> THIS SECTION TEACHES US HOW WE CAN CREATE A FORM ON AN HTML PAGE. IN THIS SECTION, I WILL SHOWCASE THE USE OF
         VARIOUS OUTPUTS AND THEIR USES</p>
 
     <h2>Contact Us</h2>
-    <form action="https://www.google.com/" method="get">
+    <form action="https://www.google.com/" target="_blank" method="get">
         <label for="name">Your Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -67,7 +171,7 @@
         <label for="message">Your Message:</label><br>
         <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
-        <label for="radio"> <strong>What is your favorite coding language</strong></label><br>
+        <label for="radio"><strong>What is your favorite coding language</strong></label><br>
         <input type="radio" id="html" name="fav_language" value="HTML">
         <label for="html">HTML</label><br>
         <input type="radio" id="css" name="fav_language" value="CSS">
@@ -75,39 +179,40 @@
         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
         <label for="javascript">JavaScript</label><br><br>
 
+        <label for="country">Where are you from?</label><br>
+        <select id="country" name="country">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+            <option value="India">India</option>
+            <!-- Add more countries as needed -->
+        </select><br><br>
 
-
-
-        <label for="country" Where states are you from? </label></label>
-
-        <br><br>
         <input type="submit" value="Send Message">
         <input type="reset" value="Reset">
     </form>
 
     <div class="form-footer">
-        <p>Need help? <a href="manojadhikari57@gmail.com" target="_blank">Contact Support</a></p>
+        <p>Need help? <a href="mailto:manojadhikari57@gmail.com" target="_blank">Contact Support</a></p>
     </div>
 
-    </form>
 
     <hr>
 
-    <p> This section should be made for the search engine on HTML which redirects to Google</p>
+    <p>This section should be made for the search engine on HTML which redirects to Google</p>
 
     <hr>
     <br>
 
-    <p> <strong>HOW TO ADD AUDIO AND VIDEO</strong></p>
+    <p><strong>HOW TO ADD AUDIO AND VIDEO</strong></p>
 
     <audio controls>
         <source src="accets/got.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <br>
-    <br>
-    <br>
+    <br><br><br>
 
     <video controls width="600">
         <source src="accets/got.mp4" type="video/mp4">
@@ -116,9 +221,8 @@
 
     <hr>
 
-    <marquee> HAVE A WONDERFUL DAY!!!</marquee>
+    <marquee>HAVE A WONDERFUL DAY!!!</marquee>
 
 </body>
-
 
 </html>
